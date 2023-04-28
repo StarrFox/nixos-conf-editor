@@ -38,6 +38,7 @@ impl SimpleComponent for NameEntryModel {
                 sender.input(match resp {
                     gtk::ResponseType::Accept => NameEntryMsg::Save,
                     gtk::ResponseType::Cancel => NameEntryMsg::Cancel,
+                    gtk::ResponseType::Close => NameEntryMsg::Cancel,
                     _ => unreachable!(),
                 });
             }
